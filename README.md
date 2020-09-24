@@ -102,4 +102,4 @@ In this project, it was determined that it is possible to predict the outcome of
 |                                                              | `04b_Classical_Model_Baseline.ipynb`      | CODE: Baseline classical model benchmarks                                       |
 |                                                              | `05_Classical_Model_Tuning.ipynb`         | CODE: Tunned classical model benchmarks                                         |
 |                                                              | `06_Neural_Network_Model.ipynb`           | CODE: Nerual Network model                                                      |
-| [raw_data](assets/data/)                                     | `893_1632_bundle_archive.zip`             | DATA: raw (H-1B dataset)[https://www.kaggle.com/nsharan/h-1b-visa] from kaggle) |
+| [raw_data](assets/data/)                                     | `893_1632_bundle_archive.zip`             | DATA: raw [H-1B dataset](https://www.kaggle.com/nsharan/h-1b-visa)              |
