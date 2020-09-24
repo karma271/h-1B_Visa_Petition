@@ -9,7 +9,7 @@
 
 
 ## Background
-<img align="right" width="250"  src="assets/images/000_pew_research_h1b_statistics.png">
+<img align="right" width="280"  src="assets/images/000_pew_research_h1b_statistics.png">
 The H-1B visa is a non-immigrant visa that permits companies in the United States to employ foreign workers in specialty occupations that require specialized knowledge and a bachelor’s degree or higher in the specific specialty. The US Immigrant Service has been granting 85,000 H-1B visas annually since 2004[1]. The demand for H-1B workers has shown an upward trend in recent years. The unclear selection process surrounding the H-1B visa petition has left many employers and employees wondering if it is a worthy investment to hire foreign employers.
 
 In this project, I engineered a predictive model to determine the outcome of the H-1B visa petition with the F1-score, recall, and precision of 0.98, 0.98, and 0.97, respectively. Such a model could be a useful resource for future visa applicants as well as the employer who are sponsoring them.
