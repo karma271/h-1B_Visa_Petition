@@ -86,7 +86,7 @@ In this project, it was determined that it is possible to predict the outcome of
 ## Future Recommendation
 * Revisit this problem with a more robust data set with additional predictors (example: educational background, years of experience)
 * Integrate data from more recent years (2017-2019) (work-in-progress)
-* Create an interactive web application that will allow future applicants to predict their outcome using the information they provide in an H-1B visa application.
+* Create an interactive web application that will allow future applicants to predict their H-1B visa petition outcome using the information they provide in the application.
 
 ## References
 1. [Pew research report on H-1B visa program](https://www.pewresearch.org/fact-tank/2017/04/27/key-facts-about-the-u-s-h-1b-visa-program/)
@@ -101,5 +101,5 @@ In this project, it was determined that it is possible to predict the outcome of
 |                                                              | `04_Classical_Model_Class_Balancing.ipynb`| CODE: Mitigating Class imbalance                                                |
 |                                                              | `04b_Classical_Model_Baseline.ipynb`      | CODE: Baseline classical model benchmarks                                       |
 |                                                              | `05_Classical_Model_Tuning.ipynb`         | CODE: Tunned classical model benchmarks                                         |
-|                                                              | `06_Neural_Network_Model.ipynb`           | CODE: Nerual Network model                                                      |
+|                                                              | `06_Neural_Network_Model.ipynb`           | CODE: Neural Network model                                                      |
 | [raw_data](assets/data/)                                     | `893_1632_bundle_archive.zip`             | DATA: raw [H-1B dataset](https://www.kaggle.com/nsharan/h-1b-visa)              |
