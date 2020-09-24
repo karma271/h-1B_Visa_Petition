@@ -15,10 +15,11 @@ The H-1B visa is a non-immigrant visa that permits companies in the United State
 In this project, I engineered a predictive model to determine the outcome of the H-1B visa petition with the F1-score, recall, and precision of 0.98, 0.98, and 0.97, respectively. Such a model could be a useful resource for future visa applicants as well as the employer who are sponsoring them.
 
 ## Methodology
-Data Acquisition and Processing
-I obtained a [dataset](https://www.kaggle.com/nsharan/h-1b-visa) from Kaggle  containing 3 million records of past H-1B Visa Petition applications between 2011 and 2016. The dataset consists of 7 features along with the outcome of the petition as the label. After performing some exploratory data analysis, a few of these feature columns were preprocessed in preparation for modeling.
+### Data Acquisition and Processing
+I obtained a [dataset](https://www.kaggle.com/nsharan/h-1b-visa) containing 3 million records of past H-1B Visa Petition applications between 2011 and 2016. The dataset consists of 7 features along with the outcome of the petition as the label. After performing some [exploratory data analysis]("src/01_EDA.ipynb"), a few of these feature columns were [preprocessed]("src/02_Preprocessing.ipynb") in preparation for modeling.
 
 After pre-processing the raw data, the data were divided into 60% development, 20 % validation, and 20% testing sets. All the models were trained using a development set and cross-validated using a validation set. The test set was used to assess the effectiveness of the model. Due to the inherent bias present in the dataset due to imbalance class between “CERTIFIED” and “DENIED” labels, the data were downsampled from the majority class for the development set.
+
 
 ### Modeling
 To train the models, I used three classical models, namely Logistic Regression, Support Vector Classifier, and Gradient Boost Classifier. Besides, I also experimented with a Neural Network architecture. A summary of each of the classifier is presented below:
@@ -59,6 +60,7 @@ Furthermore, since the dataset contains high class-imbalance characteristics, th
 
 
 
+
 |          Confusion matrix Baseline Classical Model          |              Confusion matrix Tuned Classical Model          |     
 | :---------------------------------------------------------: | :-----------------------------------------------------------:| 
 | ![CNN_Binary](./assets/images/006a_prelim_classical_cm.png) | ![CNN_Binary](./assets/images/006b_tuned_classical_cm.png)   | 
@@ -69,7 +71,9 @@ Furthermore, since the dataset contains high class-imbalance characteristics, th
 
 ## Results
 <img align="right" width="271" src="assets/images/008_NN_L2_cm.png"> 
-The preliminary baseline result of the classical models is presented in the table and the confusion matrix above. Although the recall and F1 scores are high, due to the class imbalance, these classical models are ineffective at correctly detecting denied instances which are the minority class in the data-set. After tuning the models and minimizing the class imbalance by undersampling the majority class (75:25) from (99:1), the marginal performance improvement was obtained. Among the classical models, the ensemble gradient boost model was the best performing model with an F1 score of 0.96 which is better than the baseline model by 2%. As shown in the summary table, the performance of all the classical models was fairly comparable. Upon exhausting classical techniques to finetune the model, Neural Network was explored to improve predictive performance. The neural network model, with two hidden layers, relu as activation function, and l2 regularization outperformed all the classical models with an F1 score of 0.98. The superior performance of the neural network in comparison to classical models could be attributed to NN’s ability to learn and explain the complexities in the data.
+The preliminary baseline result of the classical models is presented in the table and the confusion matrix above. Although the recall and F1 scores are high, due to the class imbalance, these classical models are ineffective at correctly detecting denied instances which are the minority class in the data-set. After tuning the models and minimizing the class imbalance by undersampling the majority class (75:25) from (99:1), the marginal performance improvement was obtained. Among the classical models, the ensemble gradient boost model was the best performing model with an F1 score of 0.96 which is better than the baseline model by 2%. As shown in the summary table, the performance of all the classical models was fairly comparable. 
+
+Upon exhausting classical techniques to finetune the model, Neural Network was explored to improve predictive performance. The neural network model, with two hidden layers, relu as activation function, and l2 regularization outperformed all the classical models with an F1 score of 0.98. The superior performance of the neural network in comparison to classical models could be attributed to NN’s ability to learn and explain the complexities in the data.
 
 <p align="center">
   <img align="center" width="300" src="assets/images/009_NN_scores.png">
@@ -82,7 +86,7 @@ In this project, it was determined that it is possible to predict the outcome of
 ## Future Recommendation
 * Revisit this problem with a more robust data set with additional predictors (example: educational background, years of experience)
 * Integrate data from more recent years (2017-2019) (work-in-progress)
-* Create an interactive app that will allow future applicants to predict their outcome using the information they provide in an H-1B visa application.
+* Create an interactive web application that will allow future applicants to predict their outcome using the information they provide in an H-1B visa application.
 
 ## References
 1. [Pew research report on H-1B visa program](https://www.pewresearch.org/fact-tank/2017/04/27/key-facts-about-the-u-s-h-1b-visa-program/)
