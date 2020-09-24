@@ -26,7 +26,8 @@ To train the models, I used three classical models, namely Logistic Regression, 
 #### Logistic Regression
 Logistic regression uses the sigmoid function as its hypothesis as given by equation (1), The key assumption behind logistic regression for binary classification problem is illustrated using equation (2). When training the model, logistic regression attempts to find theta parameter that maximizes the log-likelihood of the data as given by equation (3). Logistic regression thus gives a conditional distribution of response Y given predictor variables represented in matrix x. Furthermore, Logistic regression can be thought of as a generalized linear model in which the link function given by equation (3) relates the response variable Y to the linear model.
 
-<img align="center" width="460" src="assets/images/002_logistic_regression_full.png">
+<!-- <img align="center" width="460" src="assets/images/002_logistic_regression_full.png"> -->
+![logistic_regression](assets/images/002_logistic_regression_full.png)
 
 
 #### Support Vector Classifier
