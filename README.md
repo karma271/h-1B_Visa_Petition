@@ -16,7 +16,7 @@ In this project, I engineered a predictive model to determine the outcome of the
 
 ## Methodology
 ### Data Acquisition and Processing
-I obtained a [dataset](https://www.kaggle.com/nsharan/h-1b-visa) containing 3 million records of past H-1B Visa Petition applications between 2011 and 2016. The dataset consists of 7 features along with the outcome of the petition as the label. After performing some [exploratory data analysis]("src/01_EDA.ipynb"), a few of these feature columns were [preprocessed]("src/02_Preprocessing.ipynb") in preparation for modeling.
+I obtained a [dataset](https://www.kaggle.com/nsharan/h-1b-visa) containing 3 million records of past H-1B Visa Petition applications between 2011 and 2016. The dataset consists of 7 features along with the outcome of the petition as the label. After performing some [exploratory data analysis]("./src/01_EDA.ipynb"), a few of these feature columns were [preprocessed]("./src/02_Preprocessing.ipynb") in preparation for modeling.
 
 After pre-processing the raw data, the data were divided into 60% development, 20 % validation, and 20% testing sets. All the models were trained using a development set and cross-validated using a validation set. The test set was used to assess the effectiveness of the model. Due to the inherent bias present in the dataset due to imbalance class between “CERTIFIED” and “DENIED” labels, the data were downsampled from the majority class for the development set.
 
@@ -79,7 +79,6 @@ Upon exhausting classical techniques to finetune the model, Neural Network was e
   <img align="center" width="300" src="assets/images/009_NN_scores.png">
 </p>
 
-
 ## Conclusion
 In this project, it was determined that it is possible to predict the outcome of an H-1B visa petition based on the attributes of the applicant using machine learning with fairly high recall and precision. With a 0.98 F1 score with the corresponding recall and precision of 0.98 and 0.97, respectively, the neural network architecture showed the best performance. Although the model has a high F1 score, there is still some room for improvement, it will be important to integrate more useful predictors that can further improve the performance and increase the confidence of the prediction. Comparable results from the classical models and neural network models suggest that such classical models may remove the need for fancier neural network architecture if we invest in a robust dataset with better predictive features.
 
@@ -95,11 +94,11 @@ In this project, it was determined that it is possible to predict the outcome of
 ## Directory Structure
 | Directory                                                    | Filename                                  | Description                                                                     |
 | ------------------------------------------------------------ | ----------------------------------------- | ------------------------------------------------------------------------------- |
-| [src](src)                                                   | `01_EDA.ipynb`                            | CODE: Exploratory Data Analysis                                                 |
+| [src](./src)                                                   | `01_EDA.ipynb`                            | CODE: Exploratory Data Analysis                                                 |
 |                                                              | `02_Preprocessing.ipynb`                  | CODE: Preprocessing for modeling                                                |
 |                                                              | `03_Classical_Model_Benchmarking.ipynb`   | CODE: Preliminary classical model benchmarks                                    |
 |                                                              | `04_Classical_Model_Class_Balancing.ipynb`| CODE: Mitigating Class imbalance                                                |
 |                                                              | `04b_Classical_Model_Baseline.ipynb`      | CODE: Baseline classical model benchmarks                                       |
 |                                                              | `05_Classical_Model_Tuning.ipynb`         | CODE: Tunned classical model benchmarks                                         |
 |                                                              | `06_Neural_Network_Model.ipynb`           | CODE: Neural Network model                                                      |
-| [raw_data](assets/data/)                                     | `893_1632_bundle_archive.zip`             | DATA: raw [H-1B dataset](https://www.kaggle.com/nsharan/h-1b-visa)              |
+| [raw_data](./assets/data/)                                     | `893_1632_bundle_archive.zip`             | DATA: raw [H-1B dataset](https://www.kaggle.com/nsharan/h-1b-visa)              |
