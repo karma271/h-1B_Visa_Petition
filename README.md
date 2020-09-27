@@ -56,7 +56,7 @@ Neural Network architectures are a non-linear machine learning technique that ut
 
 ## Evaluation Metric
 <img align="right" width="320" src="assets/images/007_prelim_and_tuned_scores.png">
-Since the objective of the model is to correctly predict the outcome of the H-1B visa petition a high true positive rate and low false negative is desired in our prediction. To that effect, recall, commonly known as a sensitivity, which measures the true positive rate and precision which minimizes the false negative, are suitable evaluation metrics. In order to capture both recall and precision in a single metric, the F1 score, a harmonic mean of said metrics, is utilized to optimize my models. A high F1 score indicates that the model has high recall and high precision. It is important to note that accuracy as an evaluation metric when dealing with high-class imbalance can be miss-leading due to inherent bias in the dataset. 
+Since the objective of the model is to correctly predict the outcome of the H-1B visa petition a high true positive rate and low false negative is desired in our prediction. This is to ensure that an applicant is provided a likelihood of the true or accurate outcome of their application rather than being given a falsely exaggerated or falsely deflating outcome. To that effect, recall, commonly known as a sensitivity, which measures the true positive rate and precision which minimizes the false negative, are suitable evaluation metrics. In order to capture both recall and precision in a single metric, the F1 score, a harmonic mean of said metrics, is utilized to optimize my models. A high F1 score indicates that the model has high recall and high precision. It is important to note that accuracy as an evaluation metric when dealing with high-class imbalance can be miss-leading due to inherent bias present in the dataset.
 
 Furthermore, since the dataset contains high class-imbalance characteristics, the average prediction outcome cannot be used as a baseline metric. As such, I used vanilla Logistic Regression without regularization as my baseline model, with a 0.94 F1 score. The success of my model was evaluated based on whether they can outperform the baseline model.
 
@@ -70,19 +70,17 @@ Furthermore, since the dataset contains high class-imbalance characteristics, th
 
 
 
-
 ## Results
 <img align="right" width="271" src="assets/images/008_NN_L2_cm.png"> 
 The preliminary baseline result of the classical models is presented in the table and the confusion matrix above. Although the recall and F1 scores are high, due to the class imbalance, these classical models are ineffective at correctly detecting denied instances which are the minority class in the data-set. After tuning the models and minimizing the class imbalance by undersampling the majority class (75:25) from (99:1), the marginal performance improvement was obtained. Among the classical models, the ensemble gradient boost model was the best performing model with an F1 score of 0.96 which is better than the baseline model by 2%. As shown in the summary table, the performance of all the classical models was fairly comparable. 
 
-Upon exhausting classical techniques to finetune the model, Neural Network was explored to improve predictive performance. The neural network model, with two hidden layers, relu as activation function, and l2 regularization outperformed all the classical models with an F1 score of 0.98. The superior performance of the neural network in comparison to classical models could be attributed to NN’s ability to learn and explain the complexities in the data.
-
+Upon exhausting classical techniques to finetune the model, Neural Network was explored to improve predictive performance. The neural network model with two hidden layers, relu as activation function, and l2 regularization, outperformed all the classical models with an F1 score of 0.98. The superior performance of the neural network in comparison to classical models could be attributed to NN’s ability to learn and explain the complexities in the data which can provide us an undeniably useful predictive power. 
 <p align="center">
   <img align="center" width="300" src="assets/images/009_NN_scores.png">
 </p>
 
 ## Conclusion
-In this project, it was determined that it is possible to predict the outcome of an H-1B visa petition based on the attributes of the applicant using machine learning with fairly high recall and precision. With a 0.98 F1 score with the corresponding recall and precision of 0.98 and 0.97, respectively, the neural network architecture showed the best performance. Although the model has a high F1 score, there is still some room for improvement, it will be important to integrate more useful predictors that can further improve the performance and increase the confidence of the prediction. Comparable results from the classical models and neural network models suggest that such classical models may remove the need for fancier neural network architecture if we invest in a robust dataset with better predictive features.
+In this project, it was determined that it is possible to predict the outcome of an H-1B visa petition based on the attributes of the applicant using machine learning with fairly high recall and precision. With a 0.98 F1 score and the corresponding recall and precision of 0.98 and 0.97, respectively, the neural network architecture showed the best performance. Although the model has a high F1 score, there is still some room for improvement, it will be important to integrate more useful predictors that can further improve the performance and increase the confidence of the prediction. Comparable results from the classical models and neural network models suggest that such classical models may remove the need for fancier neural network architecture if we invest in a robust dataset with better predictive features.
 
 ## Future Recommendation
 * Revisit this problem with a more robust data set with additional predictors (example: educational background, years of experience)
