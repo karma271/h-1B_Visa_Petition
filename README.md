@@ -16,7 +16,8 @@ In this project, I engineered a predictive model to determine the outcome of the
 
 ## Methodology
 ### Data Acquisition and Processing
-I obtained a [dataset](https://www.kaggle.com/nsharan/h-1b-visa) containing 3 million records of past H-1B Visa Petition applications between 2011 and 2016. The dataset consists of 7 features along with the outcome of the petition as the label. After performing some [exploratory data analysis]("/src/01_EDA.ipynb"), a few of these feature columns were [preprocessed]("src/02_Preprocessing.ipynb") in preparation for modeling. 
+I obtained a [dataset](https://www.kaggle.com/nsharan/h-1b-visa) containing 3 million records of past H-1B Visa Petition applications between 2011 and 2016. The dataset consists of 7 features along with the outcome of the petition as the label. After performing some [exploratory data analysis](src/01_EDA.ipynb), a few of these feature columns were [preprocessed](src/02_Preprocessing.ipynb) in preparation for modeling. 
+
 
 
 After pre-processing the raw data, the data were divided into 60% development, 20 % validation, and 20% testing sets. All the models were trained using a development set and cross-validated using a validation set. The test set was used to assess the effectiveness of the model. Due to the inherent bias present in the dataset due to imbalance class between “CERTIFIED” and “DENIED” labels, the data were downsampled from the majority class for the development set.
