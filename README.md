@@ -20,7 +20,7 @@ I obtained a [dataset](https://www.kaggle.com/nsharan/h-1b-visa) containing 3 mi
 
 
 
-After pre-processing the raw data, the data were divided into 60% development, 20 % validation, and 20% testing sets. All the models were trained using a development set and cross-validated using a validation set. The test set was used to assess the effectiveness of the model. Due to the inherent bias present in the dataset due to imbalance class between “CERTIFIED” and “DENIED” labels, the data were downsampled from the majority class for the development set.
+After pre-processing the raw data, the data were divided into 60% development, 20% validation, and 20% testing sets. All the models were trained using a development set and cross-validated using a validation set. The test set was used to assess the effectiveness of the model. Due to the inherent bias present in the dataset due to imbalance class between “CERTIFIED” and “DENIED” labels, the data were downsampled from the majority class for the development set.
 
 
 ### Modeling
